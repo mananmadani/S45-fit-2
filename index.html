@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>S45 Jeans Shrinkage & Fit</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#e8f2ff"/>
+</head>
+<body>
+  <div class="app-shell">
+    <div class="tab-fab">
+      <button class="tab-btn active" id="tab-shrinkage">Shrinkage</button>
+      <button class="tab-btn" id="tab-fit">Fit Converter</button>
+    </div>
+    <main class="scene">
+      <!-- Shrinkage Calculator -->
+      <section class="tab-section visible" id="shrinkage-section">
+        <div class="logo-card">
+          <img src="s45-logo.png" alt="S45 Jeans" class="logo"/>
+        </div>
+        <div class="title">S45 Jeans<br>Shrinkage Calculator</div>
+        <form id="shrinkageForm" autocomplete="off">
+          <div class="card glass">
+            <div class="section-label">Length</div>
+            <div class="floating-group">
+              <input type="number" step="0.01" id="lengthBefore">
+              <label>Before wash</label>
+            </div>
+            <div class="floating-group">
+              <input type="number" step="0.01" id="lengthAfter">
+              <label>After wash</label>
+            </div>
+          </div>
+          <div class="card glass">
+            <div class="section-label">Waist</div>
+            <div class="floating-group">
+              <input type="number" step="0.01" id="waistBefore">
+              <label>Before wash</label>
+            </div>
+            <div class="floating-group">
+              <input type="number" step="0.01" id="waistAfter">
+              <label>After wash</label>
+            </div>
+          </div>
+          <div class="card glass">
+            <div class="section-label">Thigh</div>
+            <div class="floating-group">
+              <input type="number" step="0.01" id="thighBefore">
+              <label>Before wash</label>
+            </div>
+            <div class="floating-group">
+              <input type="number" step="0.01" id="thighAfter">
+              <label>After wash</label>
+            </div>
+          </div>
+          <div class="card glass">
+            <div class="section-label">Bottom</div>
+            <div class="floating-group">
+              <input type="number" step="0.01" id="bottomBefore">
+              <label>Before wash</label>
+            </div>
+            <div class="floating-group">
+              <input type="number" step="0.01" id="bottomAfter">
+              <label>After wash</label>
+            </div>
+          </div>
+          <button type="submit" id="calcBtn" class="main-btn">Calculate Shrinkage</button>
+        </form>
+        <div id="shrinkageResults" class="result-area"></div>
+        <button id="sendToFit" class="main-btn accent-btn">Send % to Fit Converter</button>
+      </section>
+      <!-- Fit Converter -->
+      <section class="tab-section" id="fit-section">
+        <div class="logo-card">
+          <img src="s45-logo.png" alt="S45 Jeans" class="logo"/>
+        </div>
+        <div class="title accent">S45 Fit Converter</div>
+        <form id="fitForm" autocomplete="off">
+          <div class="card glass tight">
+            <div class="section-label">Target (inches)</div>
+            <div class="floating-group"><input type="number" step="0.01" id="target-waist"><label>Waist</label></div>
+            <div class="floating-group"><input type="number" step="0.01" id="target-thigh"><label>Thigh</label></div>
+            <div class="floating-group"><input type="number" step="0.01" id="target-bottom"><label>Bottom</label></div>
+          </div>
+          <div class="card glass tight">
+            <div class="section-label">Actual Cloth Shrinkage (%)</div>
+            <div class="floating-group"><input type="number" step="0.01" id="actual-waist-shrinkage"><label>Waist</label></div>
+            <div class="floating-group"><input type="number" step="0.01" id="actual-thigh-shrinkage"><label>Thigh</label></div>
+            <div class="floating-group"><input type="number" step="0.01" id="actual-bottom-shrinkage"><label>Bottom</label></div>
+          </div>
+          <div class="card glass tight">
+            <div class="section-label">Farma Shrinkage (%)</div>
+            <div class="floating-group"><input type="number" step="0.01" id="farma-shrinkage"><label>Farma</label></div>
+          </div>
+          <button type="submit" class="main-btn">Calculate Fit</button>
+        </form>
+        <div id="results" class="result-area"></div>
+      </section>
+      <footer>© S45 Jeans Company</footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
