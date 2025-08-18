@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>S45 Jeans Shrinkage & Fit</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="logo-card">
+        <img src="s45-logo.png" alt="S45 logo" class="logo" />
+      </div>
+      <div class="tab-fab">
+        <button id="tab-shrinkage" class="tab-btn active">Shrinkage</button>
+        <button id="tab-fit" class="tab-btn">Fit</button>
+      </div>
+    </header>
+
+    <main class="scene">
+      <!-- Shrinkage Calculator -->
+      <section class="tab-section visible" id="shrinkageTab">
+        <div class="title accent">Shrinkage Calculator</div>
+        <form id="shrinkageForm">
+          <div class="section-label">Enter before & after measurements:</div>
+          <div class="card glass">
+            <div class="floating-group">
+              <input id="lengthBefore" type="number" step="any" placeholder=" " />
+              <label for="lengthBefore">Length Before</label>
+            </div>
+            <div class="floating-group">
+              <input id="lengthAfter" type="number" step="any" placeholder=" " />
+              <label for="lengthAfter">Length After</label>
+            </div>
+            <div class="floating-group">
+              <input id="waistBefore" type="number" step="any" placeholder=" " />
+              <label for="waistBefore">Waist Before</label>
+            </div>
+            <div class="floating-group">
+              <input id="waistAfter" type="number" step="any" placeholder=" " />
+              <label for="waistAfter">Waist After</label>
+            </div>
+            <div class="floating-group">
+              <input id="thighBefore" type="number" step="any" placeholder=" " />
+              <label for="thighBefore">Thigh Before</label>
+            </div>
+            <div class="floating-group">
+              <input id="thighAfter" type="number" step="any" placeholder=" " />
+              <label for="thighAfter">Thigh After</label>
+            </div>
+            <div class="floating-group">
+              <input id="bottomBefore" type="number" step="any" placeholder=" " />
+              <label for="bottomBefore">Bottom Before</label>
+            </div>
+            <div class="floating-group">
+              <input id="bottomAfter" type="number" step="any" placeholder=" " />
+              <label for="bottomAfter">Bottom After</label>
+            </div>
+            <button type="submit" class="main-btn">Calculate Shrinkage</button>
+          </div>
+        </form>
+        <div id="shrinkageResults" class="result-area"></div>
+      </section>
+
+      <!-- Fit Converter -->
+      <section class="tab-section" id="fitTab">
+        <div class="title accent">Fit Converter</div>
+        <form id="fitForm">
+          <div class="section-label">Enter before & after measurements:</div>
+          <div class="card glass">
+            <div class="floating-group">
+              <input id="lengthBeforeFit" type="number" step="any" placeholder=" " />
+              <label for="lengthBeforeFit">Length Before</label>
+            </div>
+            <div class="floating-group">
+              <input id="lengthAfterFit" type="number" step="any" placeholder=" " />
+              <label for="lengthAfterFit">Length After</label>
+            </div>
+            <div class="floating-group">
+              <input id="waistBeforeFit" type="number" step="any" placeholder=" " />
+              <label for="waistBeforeFit">Waist Before</label>
+            </div>
+            <div class="floating-group">
+              <input id="waistAfterFit" type="number" step="any" placeholder=" " />
+              <label for="waistAfterFit">Waist After</label>
+            </div>
+            <div class="floating-group">
+              <input id="thighBeforeFit" type="number" step="any" placeholder=" " />
+              <label for="thighBeforeFit">Thigh Before</label>
+            </div>
+            <div class="floating-group">
+              <input id="thighAfterFit" type="number" step="any" placeholder=" " />
+              <label for="thighAfterFit">Thigh After</label>
+            </div>
+            <div class="floating-group">
+              <input id="bottomBeforeFit" type="number" step="any" placeholder=" " />
+              <label for="bottomBeforeFit">Bottom Before</label>
+            </div>
+            <div class="floating-group">
+              <input id="bottomAfterFit" type="number" step="any" placeholder=" " />
+              <label for="bottomAfterFit">Bottom After</label>
+            </div>
+            <button type="submit" class="main-btn accent-btn">Calculate Fit Difference</button>
+          </div>
+        </form>
+        <div id="fitResults" class="result-area"></div>
+      </section>
+    </main>
+    <footer>
+      S45 Jeans Shrinkage & Fit – &copy; 2025
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
